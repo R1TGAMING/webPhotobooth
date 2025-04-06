@@ -1,13 +1,15 @@
-import React from 'react'
-import Hero from '../components/section/Hero'
+import React from "react";
+import Hero from "../components/section/Hero";
+import Navbar from "../components/section/Navbar";
 
 function MainPage() {
   return (
     <div>
-        <Hero/>
-        
+      <Navbar />
+      <Hero />
+      
     </div>
-  )
+  );
 }
 
-export default MainPage
+export default MainPage;

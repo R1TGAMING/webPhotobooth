@@ -1,20 +1,25 @@
-import React from "react";
+import React, { JSX } from "react";
 
 interface ButtonsProps {
   text: string;
+  href?: string;
 }
 
-export const Buttons: React.FunctionComponent<ButtonsProps> = ({ text   }) => {
+export const InfoButtons: React.FunctionComponent<ButtonsProps> = ({
+  text,
+  href = "#",
+}): JSX.Element => {
   return (
-    <button
-      className={
-        "bg-blue-400 p-2 text-white w-40 rounded-lg shadow text-center my-2 shadow-blue-400"
-      }
-
-    >
-      <p>{text}</p>
-    </button>
+    <a href={href}>
+      <button
+        className={
+          "bg-blue-400 p-2 text-white cursor-pointer w-40 rounded-lg shadow text-center my-2 shadow-blue-400"
+        }
+      >
+        <p>{text}</p>
+      </button>
+    </a>
   );
 };
 
-export default Buttons;
+export default InfoButtons;
